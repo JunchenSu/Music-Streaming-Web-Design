@@ -1,0 +1,65 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <link rel="shortcut" href="/favicon.ico"/>
+    <title>Music+</title>
+    <link href="./css/style_log.css" rel="stylesheet" type="text/css">
+
+</head>
+
+<body class="login">
+<div class="login_m">
+    <div class="login_logo"><img src="./css/login/logo.png" width="196" height="46"></div>
+    <div class="login_boder" id="border">
+        <div class="login_padding" id="login_model">
+            <div id="login">
+                <h2>USERNAME</h2>
+                <label>
+                    <input type="text" id="username" class="txt_input txt_input2" placeholder="userid">
+                </label>
+                <h2>PASSWORD</h2>
+                <label>
+                    <input type="password" name="textfield2" id="password" class="txt_input" placeholder="*******">
+                </label>
+            </div>
+
+
+            <div id="signup" style="display: none">
+                <h2>NAME</h2>
+                <label>
+                    <input type="text" id="name" class="txt_input txt_input2" placeholder="name">
+                </label>
+                <h2>EMAIL</h2>
+                <label>
+                    <input type="text" id="email" class="txt_input txt_input2" placeholder="email">
+                </label>
+                <h2>CITY</h2>
+                <label>
+                    <input type="text" name="textfield2" id="city" class="txt_input txt_input2" placeholder="city">
+                </label>
+            </div>
+
+            <p class="forgot" id="switch"><a id="iforgot" href="javascript:void(0);">Don't have an account?</a></p>
+            <div class="rem_sub">
+                <label>
+                    <input type="submit" class="sub_button" name="button" id="button1" value="SIGN-IN"
+                           style="opacity: 0.7;">
+                </label>
+                <label>
+                    <input type="submit" class="sub_button" name="button" id="button2" value="SIGN-UP"
+                           style="opacity: 0.7; display: none">
+                </label>
+            </div>
+        </div>
+        <!--login_padding  Sign up end-->
+    </div><!--login_boder end-->
+    <p id="error" align="center" style="color:#cc0000; display: none">Error</p>
+</div><!--login_m end-->
+
+
+</body>
+<script src="js/login.js" type="text/javascript"></script>
+<script src="https://rawgit.com/emn178/js-md5/master/build/md5.min.js" type="text/javascript"></script>
+</html>

@@ -1,0 +1,252 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <title>Home</title>
+    <link rel="shortcut" href="/favicon.ico"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <meta name="keywords" content="My Play Responsive web template, Bootstrap Web Templates, Flat Web Templates, Andriod Compatible web template,
+Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, SonyErricsson, Motorola web design"/>
+    <!-- bootstrap -->
+    <link href="css/bootstrap.min.css" rel='stylesheet' type='text/css' media="all"/>
+    <!-- //bootstrap -->
+    <link href="css/dashboard.css" rel="stylesheet">
+    <!-- Custom Theme files -->
+    <link href="css/style.css" rel='stylesheet' type='text/css' media="all"/>
+    <script src="js/jquery-1.11.1.min.js"></script>
+    <!--start-smoth-scrolling-->
+    <!-- fonts -->
+    <!--<link href='http://fonts.useso.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800'-->
+    <!--rel='stylesheet' type='text/css'>-->
+    <!--<link href='http://fonts.useso.com/css?family=Poiret+One' rel='stylesheet' type='text/css'>-->
+    <!-- //fonts -->
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,300,700' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+</head>
+<body>
+<div id="all">
+<nav class="navbar navbar-inverse navbar-fixed-top">
+    <div class="container-fluid">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar"
+                    aria-expanded="false" aria-controls="navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand"><h1><img id ="logo" src="./css/login/logo.png" width="153px" height="49px" alt=""/></h1></a>
+        </div>
+        <div id="navbar" class="navbar-collapse collapse">
+            <div class="top-search">
+                <form class="navbar-form navbar-right">
+                    <input type="text" id = "keyword" class="form-control" placeholder="Search...">
+                </form>
+                <div class="file">
+                    <select id = "topsearch" >
+                        <option value="artists">Artist</option>
+                        <option value="albums">Album</option>
+                        <option value="new">New Release</option>
+                        <option value="playlists">Playlist</option>
+                    </select>
+                </div>
+                <div class="signin">
+                    <!--<a class="play-icon popup-with-zoom-anim" id="search">Search</a>-->
+                    <button type="submit" name="book" id="search" value="submit" >search
+                    </button>
+                    <!-- pop-up-box -->
+                </div>
+            </div>
+            <div class="header-top-right">
+
+            <div class="clearfix"></div>
+        </div>
+    </div>
+    <div class="clearfix"></div>
+    </div>
+</nav>
+<div class="col-sm-3 col-md-2 sidebar">
+    <div class="top-navigation">
+        <div class="t-menu">MENU</div>
+        <div class="t-img">
+            <img src="./css/images/lines.png" alt=""/>
+        </div>
+        <div class="clearfix"></div>
+    </div>
+    <div class="drop-navigation drop-navigation">
+        <ul class="nav nav-sidebar">
+            <li class="active"><a href="home.html" class="home-icon"><span class="glyphicon glyphicon-home"
+                                                                            aria-hidden="true"></span>Home</a></li>
+            <li id="favorite"><a href="#" class="menu"><span class="glyphicon glyphicon-heart"
+                                                             aria-hidden="true"></span>Favorite</a></li>
+            <li id="playlistBtn"><a href="#" class="song-icon"><span class="glyphicon glyphicon-music"
+                                                                     aria-hidden="true"></span>Playlist</a></li>
+            <li id="historyButton"><a href="#" class="sub-icon"><span class="glyphicon glyphicon-home glyphicon-hourglass"
+                                                              aria-hidden="true"></span>History</a></li>
+            <li id="profilebtn"><a href="#" class="news-icon"><span class="glyphicon glyphicon-user"
+                                                            aria-hidden="true"></span>Profile</a></li>
+            <li id="newpl"><a href="#" class="add-icon"><span class="glyphicon glyphicon-plus-sign"
+                                                                    aria-hidden="true"></span>New Playlist</a></li>
+            <li id="logout"><a href="#" class="out-icon"><span class="glyphicon glyphicon-log-out"
+                                                              aria-hidden="true"></span>Log Out</a></li>
+
+        </ul>
+         script-for-menu
+        <script>
+            $(".top-navigation").click(function () {
+                $(".drop-navigation").slideToggle(300, function () {
+                });
+            });
+        </script>
+        <div class="side-bottom">
+            <div class="side-bottom-icons">
+                <ul class="nav2">
+                    <li><a href="#" class="facebook"> </a></li>
+                    <li><a href="#" class="facebook twitter"> </a></li>
+                    <li><a href="#" class="facebook chrome"> </a></li>
+                    <li><a href="#" class="facebook dribbble"> </a></li>
+                </ul>
+            </div>
+            <div class="copyright">
+                <p>Copyright &copy; 2017.Company name All rights reserved.</p>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!--开始！！！-->
+<div id="newplform" class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main" style="display: none;">
+    <div class="main-grids" id="main-grids3">
+        <div id="plprofile" class="show-top-grids">
+            <div class="main-grids news-main-grids">
+                <div class="recommended-info">
+                    <div align="center">
+                        <img  id ="plimg" src = "css/images/pldefault.png" width="320px" height="320px"/>
+                        <div align="left" class = "col-xs-6 col-md-4">
+                            <form  method="POST" role="form" action="./PHP/rpc/Upload.php" target="myIframe2" enctype="multipart/form-data">
+                                <label for="plname">Name</label>
+                                <input width="10" type="text" size="10" id="plname" name="plname" class="form-control"
+                                       placeholder="Playlist name"/>
+                                <b>Access Type</b>
+                                <div>
+                                <input type="radio" size="10" id="access1" name="access"
+                                            value = "public"/>
+                                <label style="font-weight:normal" for="access1">public</label>
+                                <input style="padding-left: auto" type="radio" size="10" id="access2" name="access"
+                                       value="private"/>
+                                <label style="font-weight:normal" for="access2">private</label>
+                                </div>
+                                <label for="file">Icon</label>
+                                <input type="file" size="10" id="plfile" name="file"/>
+                                <input type="text" value="playlist" size="10" name="type" style="display: none"/>
+                                <input type="text" value="" size="10" name="username" id="userid" style="display: none"/>
+
+                                <div class="container col-center-block" style="width: 40%">
+                                    <p align="center">
+                                        <button type="submit" name="book" id="plsubmit" value="submit" class="btn btn-info btn-block">
+                                            <span class="glyphicon glyphicon-send"></span> submit
+                                        </button>
+                                    </p>
+                                </div>
+                            </form>
+                            <p id="error" align="center" style="color:#cc0000; display: none">Error</p>
+                            <iframe id="myIframe2" name="myIframe2" style="display:none;"></iframe>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</div>
+
+<div id="mainmain2" class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main" style="display: none;">
+    <div class="main-grids" id="main-grids2">
+        <div id="profile" class="show-top-grids">
+            <div class="main-grids news-main-grids">
+                <div class="recommended-info">
+                    <div align="center">
+                        <img  id ="icon" src = "" width="320px" height="320px"/>
+                        <div align="left" class = "col-xs-6 col-md-4">
+                            <form  method="POST" role="form" action="./PHP/rpc/Upload.php" target="myIframe" enctype="multipart/form-data">
+                                <label for="username">Username</label>
+                                <input width="10" type="text" size="10" id="username" name="username" class="form-control"
+                                       value="Please input username" readonly/>
+                                <label for="name">Name</label>
+                                <input type="text" size="10" id="name" name="name" class="form-control"
+                                       value="Please enter the keyword"/>
+                                <label for="email">Email</label>
+                                <input type="text" size="10" id="email" name="email" class="form-control"
+                                       value="Please enter the number of seats"/>
+                                <label for="City">City</label>
+                                <input type="text" size="10" id="city" name="city" class="form-control"
+                                       value="Please enter the number of seats"/>
+                                <label for="file">Icon</label>
+                                <input type="file" size="10" id="file" name="file"/>
+                                <input type="text" value="account" size="10" id="type" name="type" style="display: none"/>
+
+                            <div class="container col-center-block" style="width: 40%" id="buttons">
+                                <p align="center">
+                                    <button type="submit" name="sumbit" id="sumbit" value="submit" class="btn btn-info btn-block">
+                                        <span class="glyphicon glyphicon-send"></span> submit
+                                    </button>
+                                </p>
+                            </div>
+                            </form>
+                            <iframe id="myIframe" name="myIframe" style="display:none;"></iframe>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div id="mainmain" class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main">
+    <div class="main-grids" id="main-grids">
+        <div class="recommended" style="display: none">
+            <div class="recommended-grids">
+                <div class="recommended-info">
+                    <h3>Recommended</h3>
+                </div>
+                <div class="col-md-3 resent-grid recommended-grid">
+                    <div class="resent-grid-img recommended-grid-img">
+                        <a><img
+                                src="https://i.scdn.co/image/22692a034870c105fc45278228cd79898332b170" alt=""/></a>
+                    </div>
+                    <div class="resent-grid-info recommended-grid-info video-info-grid">
+                        <h5><a class="title">Album Name</a></h5>
+                        <ul>
+                            <li><p class="author author-info"><a class="author">Artist Name</a></p></li>
+                            <li class="right-list"><p class="views views-info">Release Date</p></li>
+                        </ul>
+                    </div>
+                </div>
+
+
+                <div class="col-md-3 resent-grid recommended-grid">
+                    <div class="resent-grid-img recommended-grid-img">
+                        <a href="#"><img
+                                src="https://i.scdn.co/image/22692a034870c105fc45278228cd79898332b170" alt=""/></a>
+                    </div>
+                    <div class="resent-grid-info recommended-grid-info video-info-grid">
+                        <h5><a href="#" class="title">Nullam interdum metus viverra nullam varius sit sed
+                            viverra</a></h5>
+                        <ul>
+                            <li><p class="author author-info"><a href="#" class="author">John Maniya</a></p></li>
+                            <li class="right-list"><p class="views views-info">2,114,200 views</p></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+</div>
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>
